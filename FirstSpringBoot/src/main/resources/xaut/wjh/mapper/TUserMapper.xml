@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xaut.wjh.dao.TUserMapper" >
+  <insert id="insert" parameterType="xaut.wjh.entity.TUser" >
+    insert into t_users (id, username, password, 
+      birth, Sex, roleId, pic
+      )
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{birth,jdbcType=TIMESTAMP}, #{sex,jdbcType=BIT}, #{roleid,jdbcType=INTEGER}, #{pic,jdbcType=VARCHAR}
+      )
+  </insert>
+</mapper>
